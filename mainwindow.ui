@@ -65,6 +65,7 @@
     <addaction name="actionAdd_to_archive"/>
     <addaction name="actionShow_archive"/>
     <addaction name="actionDelete_note"/>
+    <addaction name="actionExport"/>
    </widget>
    <widget class="QMenu" name="menuEdit">
     <property name="title">
@@ -318,6 +319,11 @@
    </property>
    <property name="text">
     <string>Show component C</string>
+   </property>
+  </action>
+  <action name="actionExport">
+   <property name="text">
+    <string>Export</string>
    </property>
   </action>
  </widget>

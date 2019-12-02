@@ -33,6 +33,9 @@ void on_actionShow_component_A_triggered();
 void on_actionShow_component_B_triggered();
 void on_actionShow_component_C_triggered();
 
+
+void on_actionExport_triggered();
+
 private:
     Ui::MainWindow *ui;
 };

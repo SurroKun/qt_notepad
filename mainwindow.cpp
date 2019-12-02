@@ -1,4 +1,7 @@
 #include <vector>
+#include <QFile>
+#include <QFileDialog>
+#include <QTextStream>
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 static unsigned num;//Номер поточного нотатку
@@ -14,8 +17,12 @@ void MainWindow::show_note(std::vector<QString>& note){//Функція для �
     ui->textEdit->setText(tmp);
 }
 
-void MainWindow::on_actionAdd_triggered() {note.push_back(ui->textEdit->toPlainText());}//Додавання нотатку
+void MainWindow::on_actionAdd_triggered()
+{
+    note.push_back(ui->textEdit->toPlainText());        //Додавання нотатку
+}
 void MainWindow::on_actionNew_triggered() {ui->textEdit->setText(QString());}//Очищення екрану
+
 void MainWindow::on_actionAdd_to_archive_triggered()//Додавання нотатку в архів
 {
     if(!note.empty()){
@@ -50,3 +57,19 @@ void MainWindow::on_actionshow_project2_triggered()     {show_note(proj2);}//В�
 void MainWindow::on_actionShow_component_A_triggered()  {show_note(com_a);}//Відображення project1>A
 void MainWindow::on_actionShow_component_B_triggered()  {show_note(com_b);}//Відображення project1>B
 void MainWindow::on_actionShow_component_C_triggered()  {show_note(com_c);}//Відображення project1>C
+
+void MainWindow::on_actionExport_triggered()
+{
+    QFile file(QFileDialog::getSaveFileName(this,
+                                            tr("Save as"), "",
+                                            tr("text (*.txt);;All Files (*)")));
+            if (!file.open(QFile::WriteOnly | QFile::Text)) {
+                QMessageBox::warning(this, "Warning", "Cannot save file: " + file.errorString());
+                return;
+            }
+            QTextStream out(&file);
+            QString tmp="";
+            for(auto a:note)tmp+=a+"\n════════════════════════════════════════════\n";
+            out << tmp;
+            file.close();
+}
