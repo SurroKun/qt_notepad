@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>408</width>
-    <height>304</height>
+    <width>399</width>
+    <height>332</height>
    </rect>
   </property>
   <property name="cursor">
@@ -45,8 +45,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>408</width>
-     <height>20</height>
+     <width>399</width>
+     <height>26</height>
     </rect>
    </property>
    <property name="cursor">
@@ -86,7 +86,7 @@
        <iconset resource="res.qrc">
         <normaloff>:/imgs/imgs/presentation.bmp</normaloff>:/imgs/imgs/presentation.bmp</iconset>
       </property>
-      <addaction name="actionComponent_A_2"/>
+      <addaction name="actionComponent_A"/>
       <addaction name="actionComponent_B"/>
       <addaction name="actionComponent_C"/>
      </widget>
@@ -118,10 +118,8 @@
     </widget>
     <addaction name="menuAdd_in_work"/>
     <addaction name="actionAdd_in_home"/>
-    <addaction name="actionJust_note"/>
     <addaction name="menuShow_work"/>
     <addaction name="actionShow_home"/>
-    <addaction name="actionShow_just_note"/>
    </widget>
    <addaction name="menuFile"/>
    <addaction name="menuEdit"/>
@@ -250,15 +248,6 @@
     <string>Component C</string>
    </property>
   </action>
-  <action name="actionJust_note">
-   <property name="icon">
-    <iconset resource="res.qrc">
-     <normaloff>:/imgs/imgs/Just note.bmp</normaloff>:/imgs/imgs/Just note.bmp</iconset>
-   </property>
-   <property name="text">
-    <string>Add in just note</string>
-   </property>
-  </action>
   <action name="actionDelete_note">
    <property name="icon">
     <iconset resource="res.qrc">
@@ -275,15 +264,6 @@
    </property>
    <property name="text">
     <string>Show home</string>
-   </property>
-  </action>
-  <action name="actionShow_just_note">
-   <property name="icon">
-    <iconset resource="res.qrc">
-     <normaloff>:/imgs/imgs/Just note.bmp</normaloff>:/imgs/imgs/Just note.bmp</iconset>
-   </property>
-   <property name="text">
-    <string>Show just note</string>
    </property>
   </action>
   <action name="actionshow_project2">
@@ -313,15 +293,6 @@
     <string>Show component B</string>
    </property>
   </action>
-  <action name="actionShow_component_C">
-   <property name="icon">
-    <iconset resource="res.qrc">
-     <normaloff>:/imgs/imgs/copyright.bmp</normaloff>:/imgs/imgs/copyright.bmp</iconset>
-   </property>
-   <property name="text">
-    <string>Show component C</string>
-   </property>
-  </action>
   <action name="actionNext">
    <property name="icon">
     <iconset resource="res.qrc">
@@ -340,13 +311,13 @@
     <string>Back</string>
    </property>
   </action>
-  <action name="actionComponent_A_2">
+  <action name="actionShow_component_C">
    <property name="icon">
     <iconset resource="res.qrc">
-     <normaloff>:/imgs/imgs/solvent.bmp</normaloff>:/imgs/imgs/solvent.bmp</iconset>
+     <normaloff>:/imgs/imgs/copyright.bmp</normaloff>:/imgs/imgs/copyright.bmp</iconset>
    </property>
    <property name="text">
-    <string>Component A</string>
+    <string>Show component C</string>
    </property>
   </action>
  </widget>

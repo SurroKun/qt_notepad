@@ -24,19 +24,16 @@ void on_actionproject2_triggered();
 void on_actionComponent_A_triggered();
 void on_actionComponent_B_triggered();
 void on_actionComponent_C_triggered();
-void on_actionJust_note_triggered();
 void on_actionDelete_note_triggered();
 void on_actionNext_triggered();
 void on_actionBack_triggered();
 void on_actionShow_home_triggered();
-void on_actionShow_just_note_triggered();
 void on_actionshow_project2_triggered();
 void on_actionShow_component_A_triggered();
 void on_actionShow_component_B_triggered();
 void on_actionShow_component_C_triggered();
-void on_actionComponent_A_2_triggered();
 
 private:
     Ui::MainWindow *ui;
 };
-#endif 
+#endif
